@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Bookings;
+use App\Http\Controllers\Paystack;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +21,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', function () {
+Route::get('/log', function () {
     return view('login');
 });
 
@@ -38,7 +41,7 @@ Route::get('/qr', function () {
 });
 
 
-Route::get('/register', function () {
+Route::get('/signup', function () {
     return view('register');
 });
 
@@ -51,3 +54,28 @@ Route::get('/user_dashboard_transactions', function () {
     return view('user_dashboard_transactions');
 });
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('user.dashboard');
+    })->name('dashboard');
+
+    Route::get('/transactions', function (){
+        return view('user.dashboard');
+    });
+
+    Route::get('/booking', function (){
+        return view('user.book');
+    });
+
+    Route::prefix('api') -> group(function () {
+        Route::get('/paystack/verify/{trxid}/{amount}', [Paystack::class, 'verify']);
+        Route::post('/booking/new', [Bookings::class, 'create']);
+    });
+    
+});
