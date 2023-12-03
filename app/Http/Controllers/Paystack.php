@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 class Paystack extends Controller
 {
     public function verify ($ref, $amount) {
+        $id_arr = explode('-',$ref);
+        $id = $id_arr[0];
+        
         $curl = curl_init();
   
         curl_setopt_array($curl, array(
@@ -40,7 +44,10 @@ class Paystack extends Controller
 
             if($data -> data -> amount == $amount){
 
-                if($data -> data -> status){
+                // return $data -> data -> status;
+                if($data -> data -> status == 'success'){
+                    Booking::where(['booking_id' => $id]) -> update(['status' => 'paid']);
+                    
                     return response()->json([
                         'status' => 200,
                         'message' => $data
@@ -48,7 +55,7 @@ class Paystack extends Controller
                 }
                 else{
                     return response()->json([
-                        'status' => 200,
+                        'status' => 400,
                         'message' => "Payment not successful"
                     ], 200);
                 }

@@ -15,37 +15,42 @@
             </div>
 
             <script>
-                try{
-                    function handleSubmit (){
-
+                function handleSubmit (){
+                    
+                    try{
+                        
                         const formData = $('.booking-form').serializeArray();
 
                         $.ajax({
                             url: '/api/booking/new',
                             data: formData,
-                            method: 'post',
-                            success: res => console.log(res)
+                            method: 'get',
+                            success: res => {
+                                alert(res.message)
+                                console.log(res)
+                            }
                         })
 
                         return null
                     }
-                    
-                    $('.booking-form').submit(() => {
-                        return null
-                    })
+                    catch(e){
+                        console.log(e)
+                    }
+                }
 
-                    $('.submit-btn').click(() => {
-                        handleSubmit();
-                    })
-                }
-                catch(e){
-                    console.log(e)
-                    return null;
-                }
+
+                $('.submit-btn').click(() => {
+                    handleSubmit();
+                })
+                        
+                $('.booking-form').submit(() => {
+                    return null
+                })
             </script>
             
             <div class="p-5">
                 <form method="post" class="booking-form">
+                    @csrf
 
                     <div class="w-full p-3">
                         <label for="name" class="font-bold text-xs text-slate-400">Passenger Name(s)</label>
@@ -91,15 +96,15 @@
                     <div class="w-full p-3">
                         <label for="car" class="font-bold text-xs text-slate-400">Car Type</label>
                         <select id="car" name="car" class="w-full rounded-lg bg-slate-700 shadow border-0 text-slate-200">
-                            <option value="sharon">Sharon</option>
-                            <option value="18s">18 Seaters</option>
-                            <option value="32s">32 Seaters</option>
-                            <option value="marcopolo">Marcopolo</option>
+                            <option>Sharon</option>
+                            <option>18 Seaters</option>
+                            <option>32 Seaters</option>
+                            <option>Marcopolo</option>
                         </select>
                     </div>
 
                     <div class="w-full p-3">
-                        <button type="button" class="submit-btn px-3 py-2 rounded-lg font-bold text-sm text-slate-300 hover:text-slate-100 hover:bg-slate-900 bg-slate-950 shadow-lg transition">
+                        <button type="button" onclick="handleSubmit()" class="submit-btn px-3 py-2 rounded-lg font-bold text-sm text-slate-300 hover:text-slate-100 hover:bg-slate-900 bg-slate-950 shadow-lg transition">
                             Book a ride
                         </button>
                     </div>

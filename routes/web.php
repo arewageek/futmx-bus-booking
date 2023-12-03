@@ -73,9 +73,23 @@ Route::middleware([
         return view('user.book');
     });
 
+    Route::get('/map', function (){
+        return view('user.map');
+    });
+
+
+    Route::middleware([
+        'admin',
+    ]) -> prefix('admin') -> group(function(){
+        Route::get('/', function(){
+            return view('admin.dashboard');
+        });
+    });
+
     Route::prefix('api') -> group(function () {
         Route::get('/paystack/verify/{trxid}/{amount}', [Paystack::class, 'verify']);
-        Route::post('/booking/new', [Bookings::class, 'create']);
+        Route::get('/booking/new', [Bookings::class, 'create']);
+        Route::get('/booking/list', [Bookings::class, 'list']);
     });
     
 });

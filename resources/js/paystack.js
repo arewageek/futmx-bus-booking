@@ -20,6 +20,13 @@ const processPayment = async (email, amount, bookingId) => {
             fetch(`/api/paystack/verify/${response.reference}/${amount* 100}`).then(async (data) => {
                 const res = await data.json()
 
+                if(res.status === 200){
+                    alert(res.message?.message)
+                }
+                else{
+                    alert(res.message)
+                }
+
                 console.log(res)
             })
             // res = resRaw.json();

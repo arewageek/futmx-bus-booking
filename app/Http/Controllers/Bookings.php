@@ -13,11 +13,12 @@ class Bookings extends Controller
             $passenger_name = $request -> name;
             $passenger_tel = $request -> tel;
             $destination = $request -> destination;
-            $numberOfPassengers = $request -> number_of_passengers;
+            $numberOfPassengers = $request -> passengersCount;
             $time = $request -> time;
             $date = $request -> date;
-            $carType = $request -> carType;
+            $carType = $request -> car;
             $bookingId = $this -> idGenerator(6);
+            
 
             $booking = new Booking();
             $booking -> user = $user;
@@ -38,6 +39,7 @@ class Bookings extends Controller
             ], 200);
         }
         catch(\Throwable $th){
+            // return $th;
             return response()->json([
                 'status' => 500,
                 'messages' => "An error occurred while creating your order"
@@ -96,10 +98,16 @@ class Bookings extends Controller
             }
         }
         catch(\Throwable $th){
+            // return $th;
             return response()->json([
                 'status' => 500,
                 'message' => "Could not confirm payment for the selected order"
             ], 200);
         }
+    }
+
+    public function list (){
+        $reqs = Booking::where(['user' => Auth() -> user() -> email]) -> orderBy('id', 'desc') -> get();
+        return $reqs;
     }
 }

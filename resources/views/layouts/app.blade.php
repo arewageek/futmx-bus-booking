@@ -20,8 +20,8 @@
         <script src="https://js.paystack.co/v1/inline.js"></script> 
 
         <script>
-            async function pay (email, amount) {
-                await window.paystack.pay(email, amount)
+            async function pay (email, amount, bookingID) {
+                await window.paystack.pay(email, amount, bookingID)
             }
         </script>
 
