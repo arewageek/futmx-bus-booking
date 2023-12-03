@@ -110,4 +110,64 @@ class Bookings extends Controller
         $reqs = Booking::where(['user' => Auth() -> user() -> email]) -> orderBy('id', 'desc') -> get();
         return $reqs;
     }
+
+    public function adminlist () {
+        try{
+            $pendingReq = Booking::where(['status' => 'pending']) -> orderBy('id', 'desc') -> get();
+            $unpaidReq = Booking::where(['status' => 'approved']) -> orderBy('id', 'desc') -> get();
+            $recentPayments = Booking::where(['status' => 'paid']) -> orderBy('id', 'desc') -> limit(6) -> get();
+
+            $res = array(
+                'pending' => $pendingReq,
+                'unpaid' => $unpaidReq,
+                'recent' => $recentPayments
+            );
+
+            return response()->json([
+                'status' => 200,
+                'message' => $res
+            ], 200);
+        }
+
+        catch(\Throwable $th){
+            return response()->json([
+                'status' => 200,
+                'message' => "An error occurred"
+            ], 200);
+        }
+    }
+
+    public function approve ($id){
+        try{
+            Booking::where(['booking_id' => $id]) -> update(['status' => 'approved']);
+            return response()->json([
+                'status' => 200,
+                'message' => 'The request has been approved successfully'
+            ], 200);
+        }
+        catch(\Throwable $th){
+            // return $th;
+            return response()->json([
+                'status' => 400,
+                'message' => 'Could not approve this request' 
+            ], 200);
+        }
+    }
+
+    public function delete ($id) {
+        try{
+            Booking::where(['booking_id' => $id]) -> delete();
+
+            return response()->json([
+                'status' => 200,
+                'message' => "Request has been deleted"
+            ], 200);
+        }
+        catch(\Throwable $th){
+            return response()->json([
+                'status' => 500,
+                'message' => "Could not delete this request"
+            ], 200);
+        }
+    }
 }

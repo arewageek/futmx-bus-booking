@@ -62,6 +62,9 @@ Route::middleware([
 ])->group(function () {
 
     Route::get('/dashboard', function () {
+        if(Auth() -> user() -> role == 'admin'){
+            return redirect('/admin');
+        }
         return view('user.dashboard');
     })->name('dashboard');
 
@@ -90,6 +93,9 @@ Route::middleware([
         Route::get('/paystack/verify/{trxid}/{amount}', [Paystack::class, 'verify']);
         Route::get('/booking/new', [Bookings::class, 'create']);
         Route::get('/booking/list', [Bookings::class, 'list']);
+        Route::get('/admin/bookings', [Bookings::class, 'adminlist']);
+        Route::get('/admin/bookings/confirm/{id}', [Bookings::class, 'approve']);
+        Route::get('/admin/bookings/cancel/{id}', [Bookings::class, 'delete']);
     });
     
 });
