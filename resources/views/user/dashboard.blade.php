@@ -52,7 +52,20 @@
                                                 Proceed to Payment
                                             </button>
                                         </div>
-                                    </div>
+
+                                        <div class="py-3">
+                                            <div class="${trx.status === 'paid' ? 'block' : 'hidden'}">
+                                                <button onclick="javascript: $('.qr-${trx.booking_id}').toggle()" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
+                                                    Reveal QR Code
+                                                </button>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="w-full flex justify-center qr-${trx.booking_id} hidden">
+                                            <div class="p-2 shadow-lg w-auto">
+                                                {{ QrCode::generate('Successful Payment: ${trx.booking_id}') }}
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         `)
