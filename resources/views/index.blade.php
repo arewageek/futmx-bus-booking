@@ -28,42 +28,42 @@
   <p>
    Our goal is to centralize travel tech industry and make ticket bookings to your preferred location easily accessible from the comfort of your home. The bus is centralized for movement from Bosso campus-GK campus and everyother pickup stations and vice versa.  
   </p>
-  <button class="btn btn-success"><a class="nav-link text-light" href="">Book</a></button>
+  <button class="btn btn-success"><a class="nav-link text-light" href="/booking">Book</a></button>
 </div>
 <!-- services -->
 <h1 class="text-center mt-5" id="services">OUR SERVICES</h1>
 
 <div class="services">
   <div class="card">
-    <img src="transport images\32 seaters.jpg" class="card-img-top" alt="...">
+    <img src="/2.jpg" style="width: 200pt" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Marcopolo</h5>
         <p class="card-text">Book a marcopolo</p>
-        <a href="#" class="btn btn-success">Book</a>
+        <a href="/booking" class="btn btn-success">Book</a>
       </div>
     </div>
   <div class="card">
-    <img src="transport images\32 seaters.jpg" class="card-img-top" alt="...">
+    <img src="/4.png" style="width: 180pt" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">32-seaters</h5>
         <p class="card-text">Book a 32-seater bus</p>
-        <a href="#" class="btn btn-success">Book</a>
+        <a href="/booking" class="btn btn-success">Book</a>
       </div>
   </div>
   <div class="card">
-    <img src="transport images\32 seaters.jpg" class="card-img-top" alt="...">
+    <img src="/5.jpg" style="width: 200pt" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">18-seaters</h5>
         <p class="card-text">Book a 18-seater bus</p>
-        <a href="#" class="btn btn-success">Book</a>
+        <a href="/booking" class="btn btn-success">Book</a>
       </div>
   </div>
   <div class="card">
-    <img src="transport images\32 seaters.jpg" class="card-img-top" alt="...">
+    <img src="1.webp" style="width: 200pt" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Sharon</h5>
         <p class="card-text">Book a sharon vehicle</p>
-        <a href="#" class="btn btn-success">Book</a>
+        <a href="/booking" class="btn btn-success">Book</a>
       </div>
   </div>
 </div>

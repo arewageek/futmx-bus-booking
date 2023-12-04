@@ -48,7 +48,7 @@
 
                                         </table>
                                         <div class="${trx.status === 'approved' ? 'block' : 'hidden'}">
-                                            <button onclick="pay('${trx.user}', '${500 * trx.numberOfPassengers}', '${trx.booking_id}')" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
+                                            <button onclick="pay('${trx.user}', '${400 * trx.numberOfPassengers}', '${trx.booking_id}')" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
                                                 Proceed to Payment
                                             </button>
                                         </div>
@@ -63,7 +63,9 @@
                                     
                                         <div class="w-full flex justify-center qr-${trx.booking_id} hidden">
                                             <div class="p-2 shadow-lg w-auto">
-                                                {{ QrCode::generate('Successful Payment: ${trx.booking_id}') }}
+                                                {{
+                                                    QrCode::size(200) -> generate('Successful Payment: ${trx.booking_id}')
+                                                }}
                                             </div>
                                         </div>
                                 </div>

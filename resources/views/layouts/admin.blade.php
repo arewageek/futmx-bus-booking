@@ -72,7 +72,7 @@
                 <aside class="w-full md:w-[250pt] p-4">
                     <div class="bg-gray-800  rounded-xl p-4 px-6 text-gray-200 py-5">
                         <div class="flex items-center justify-between my-5">
-                            <div class="flex items-center space-x-5 font-bold">
+                            <a href="/" class="flex items-center space-x-5 font-bold">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bus-front" viewBox="0 0 16 16">
                                         <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.303 44.303 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44.304 44.304 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43.306 43.306 0 0 0 8 3"/>
@@ -82,7 +82,7 @@
                                 <span>
                                     {{ env('APP_NAME') }}
                                 </span>
-                            </div>
+                            </a>
                             <div class="md:hidden" onclick="hidenav()">
                                 <button class="hover:text-red-400 transition">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
@@ -104,7 +104,7 @@
                                     Pending Requests
                                 </div>
                             </a>
-                            <a href="/history" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
+                            {{-- <a href="/history" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
                                         <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483m.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535m-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
@@ -116,7 +116,7 @@
                                 <div>
                                     History
                                 </div>
-                            </a>
+                            </a> --}}
 
                             <a href="/map" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
                                 <div class="">

@@ -53,7 +53,7 @@
             <main class="flex justify-between md:space-x-4 flex-col md:flex-row my-12">
                 <aside class="w-full md:w-[250pt] p-4">
                     <div class="bg-gray-800  rounded-xl p-4 px-6 text-gray-200 py-5">
-                        <div class="flex items-center justify-between my-5">
+                        <a href="/" class="flex items-center justify-between my-5">
                             <div class="flex items-center space-x-5 font-bold">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bus-front" viewBox="0 0 16 16">
@@ -72,7 +72,7 @@
                                     </svg>
                                 </button>
                             </div>
-                        </div>
+                        </a>
 
                         <div class="my-5 nav-content transition hidden md:block">
                             <a href="/booking" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
@@ -98,7 +98,7 @@
                                 </div>
                             </a>
 
-                            <a href="/history" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
+                            {{-- <a href="/history" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
                                         <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483m.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535m-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
@@ -110,7 +110,7 @@
                                 <div>
                                     History
                                 </div>
-                            </a>
+                            </a> --}}
 
                             <a href="/map" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
                                 <div class="">

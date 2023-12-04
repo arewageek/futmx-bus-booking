@@ -4,7 +4,7 @@
 
 const processPayment = async (email, amount, bookingId) => {
     let handler = PaystackPop.setup({
-        key: "pk_test_15ad93662be3d2e11591b28bcf1c38771a17f503", // Replace with your public key
+        key: "pk_live_4015eb9337f3fb5b66bc3880d2c9fd2ab500d3f9", // Replace with your public key
         email,
         amount: amount* 100,
         ref: bookingId + '-' + Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
