@@ -11,6 +11,7 @@ class Bookings extends Controller
         try{
             $user = Auth() -> user() -> email;
             $passenger_name = $request -> name;
+            $matric = $request -> matric;
             $passenger_tel = $request -> tel;
             $destination = $request -> destination;
             $numberOfPassengers = $request -> passengersCount;
@@ -22,6 +23,7 @@ class Bookings extends Controller
 
             $booking = new Booking();
             $booking -> user = $user;
+            $booking -> matric = $matric;
             $booking -> passenger = $passenger_name;
             $booking -> phone_number = $passenger_tel;
             $booking -> destination = $destination;
@@ -39,7 +41,7 @@ class Bookings extends Controller
             ], 200);
         }
         catch(\Throwable $th){
-            // return $th;
+            return $th;
             return response()->json([
                 'status' => 500,
                 'messages' => "An error occurred while creating your order"

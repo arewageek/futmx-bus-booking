@@ -33,7 +33,7 @@
                                             <table class="text-left text-sm text-gray-100 pb-4">
                                                 <tr>
                                                     <th class="px-2 py-2">Name:</th>
-                                                    <td class="px-2 py-2">${trx.user}</td>
+                                                    <td class="px-2 py-2">${trx.passenger}</td>
                                                 </tr>
 
                                                 <tr>
@@ -103,7 +103,7 @@
                                             <table class="text-left text-sm text-gray-100 pb-4">
                                                 <tr>
                                                     <th class="px-2 py-2">Name:</th>
-                                                    <td class="px-2 py-2">${trx.user}</td>
+                                                    <td class="px-2 py-2">${trx.passenger}</td>
                                                 </tr>
 
                                                 <tr>
@@ -143,7 +143,7 @@
 
                                             </table>
                                             <div class="${trx.status === 'pending' ? 'block' : 'hidden'}">
-                                                <button onclick="pay('${trx.user}', '${500 * trx.numberOfPassengers}', '${trx.booking_id}')" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
+                                                <button onclick="pay('${trx.passenger}', '${500 * trx.numberOfPassengers}', '${trx.booking_id}')" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
                                                     Proceed to Payment
                                                 </button>
                                             </div>
@@ -165,7 +165,7 @@
                                             <table class="text-left text-sm text-gray-100 pb-4">
                                                 <tr>
                                                     <th class="px-2 py-2">Name:</th>
-                                                    <td class="px-2 py-2">${trx.user}</td>
+                                                    <td class="px-2 py-2">${trx.passenger}</td>
                                                 </tr>
 
                                                 <tr>
@@ -205,7 +205,7 @@
 
                                             </table>
                                             <div class="${trx.status === 'pending' ? 'block' : 'hidden'}">
-                                                <button onclick="pay('${trx.user}', '${500 * trx.numberOfPassengers}', '${trx.booking_id}')" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
+                                                <button onclick="pay('${trx.passenger}', '${500 * trx.numberOfPassengers}', '${trx.booking_id}')" class="text-xs font-bold text-slate-100 bg-slate-950 shadow-md px-3 py-3 rounded-lg hover:bg-slate-900 hover:shadow-lg transition hover:text-slate-200">
                                                     Proceed to Payment
                                                 </button>
                                             </div>
