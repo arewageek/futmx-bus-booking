@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="my-5 nav-content transition hidden md:block">
-                            <a href="/" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
+                            <a href="/admin" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
                                         <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zm4-1v1h1v-1zm1 3v-1H4v1zm7 0v-1h-1v1zm-1-2h1v-1h-1zm-6 3H4v1h1zm7 1v-1h-1v1zm-7 1H4v1h1zm7 1v-1h-1v1zm-8 1v1h1v-1zm7 1h1v-1h-1z"/>
@@ -118,7 +118,7 @@
                                 </div>
                             </a> --}}
 
-                            <a href="/map" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
+                            {{-- <a href="/map" class="w-full py-3 flex space-x-3 cursor-pointer items-center hover:bg-[#0003] hover:text-gray-50 hover:px-3 rounded-lg transition-all">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                                         <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
@@ -129,7 +129,7 @@
                                 <div>
                                     Map
                                 </div>
-                            </a>
+                            </a> --}}
                        </div>
                     </div>
                 </aside>

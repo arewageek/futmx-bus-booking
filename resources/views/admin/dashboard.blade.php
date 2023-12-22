@@ -32,6 +32,21 @@
                                         <div class="p-5">
                                             <table class="text-left text-sm text-gray-100 pb-4">
                                                 <tr>
+                                                    <th class="px-2 py-2">Name:</th>
+                                                    <td class="px-2 py-2">${trx.user}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="px-2 py-2">Matric Number:</th>
+                                                    <td class="px-2 py-2">${trx.matric}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="px-2 py-2">Phone Number:</th>
+                                                    <td class="px-2 py-2">${trx.phone_number}</td>
+                                                </tr>
+                                                
+                                                <tr>
                                                     <th class="px-2 py-2">Destination:</th>
                                                     <td class="px-2 py-2">${trx.destination == 'gk2bosso' ? "GK to Bosso" : "Bosso to GK" }</td>
                                                 </tr>
@@ -87,6 +102,21 @@
                                         <div class="p-5">
                                             <table class="text-left text-sm text-gray-100 pb-4">
                                                 <tr>
+                                                    <th class="px-2 py-2">Name:</th>
+                                                    <td class="px-2 py-2">${trx.user}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="px-2 py-2">Matric Number:</th>
+                                                    <td class="px-2 py-2">${trx.matric}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="px-2 py-2">Phone Number:</th>
+                                                    <td class="px-2 py-2">${trx.phone_number}</td>
+                                                </tr>
+                                                
+                                                <tr>
                                                     <th class="px-2 py-2">Destination:</th>
                                                     <td class="px-2 py-2">${trx.destination == 'gk2bosso' ? "GK to Bosso" : "Bosso to GK" }</td>
                                                 </tr>
@@ -133,6 +163,21 @@
             
                                         <div class="p-5">
                                             <table class="text-left text-sm text-gray-100 pb-4">
+                                                <tr>
+                                                    <th class="px-2 py-2">Name:</th>
+                                                    <td class="px-2 py-2">${trx.user}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="px-2 py-2">Matric Number:</th>
+                                                    <td class="px-2 py-2">${trx.matric}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="px-2 py-2">Phone Number:</th>
+                                                    <td class="px-2 py-2">${trx.phone_number}</td>
+                                                </tr>
+                                                
                                                 <tr>
                                                     <th class="px-2 py-2">Destination:</th>
                                                     <td class="px-2 py-2">${trx.destination == 'gk2bosso' ? "GK to Bosso" : "Bosso to GK" }</td>

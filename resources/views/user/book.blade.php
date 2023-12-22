@@ -58,6 +58,11 @@
                     </div>
 
                     <div class="w-full p-3">
+                        <label for="matric" class="font-bold text-xs text-slate-400">Matric Number</label>
+                        <input id="matric" name="matric" type="text" class="w-full rounded-lg bg-slate-700 shadow border-0 text-slate-200 placeholder:text-slate-400" placeholder="Your Matric Number" />
+                    </div>
+
+                    <div class="w-full p-3">
                         <label for="tel" class="font-bold text-xs text-slate-400">Phone Number</label>
                         <input type="tel" id="tel" name="tel" class="w-full rounded-lg bg-slate-700 shadow border-0 text-slate-200 placeholder:text-slate-400" placeholder="Enter your Phone Number" />
                     </div>
